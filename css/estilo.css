@@ -1,0 +1,220 @@
+:root {
+    --letter-color: white;
+    --letter-supersmal: 5px;
+    --letter-smal:15px;
+    --letter-supermedium: 20px;
+    --letter-medium:30px;
+    --letter-superbig: 40px;
+    --letter-big:50px;
+    --font-icon-big: 80px;
+    --font-icon-medium: 60px;
+    --font-icon-smal: 40px;
+    --back-color: rgba(81, 255, 0, 0.562);
+    --back-fullcolor: #CA8787;
+    --back-hovercolor: rgb(44, 24, 42);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container {
+   color: var(--letter-color);
+    display: grid;
+    gap: 0px;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1 fr 5fr 1fr;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/fondocompu2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(136, 116, 116, 0.5);
+}
+.header img{
+    width: 5%;
+
+}
+.header h1 {
+    font-size: var(--letter-medium);
+}
+.aux {
+  grid-column: 1 / 2;
+  grid-row: 2 / 2;  
+  width: 10%;
+  
+}
+.park {
+  grid-column: 3 / 4 ;
+  grid-row: 2 / 2; 
+  width: 10%;
+}
+.grid-item {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background: rgba(0, 0, 0, 0.9);
+    border-right: 5px solid var(--back-fullcolor);
+    border-left: 5px solid var(--back-fullcolor);
+    margin: 0;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.encabezado {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* Estilo para una imagen con borde circular */
+.circular {
+    width: 200px; /* Ajusta el ancho según tus necesidades */
+    height: 200px; /* Ajusta la altura según tus necesidades */
+    border: 10px solid var(--back-fullcolor);
+    border-radius: 50%; /* Esto crea un borde circular */
+    object-fit: cover; /* Asegura que la imagen se ajuste correctamente */
+  }
+  .encabezado h1{
+    font-size: var(--letter-big);
+  }
+.descrip {
+    width: 75%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.descrip p{
+    margin: 10px;
+    text-align: justify;
+}
+.descrip p:nth-child(1){
+    text-align: center;
+    font-size: var(--letter-supermedium);
+}
+.descrip p:nth-child(2){
+    text-align: center;
+    font-size: var(--letter-supermedium);
+}
+.descrip p:nth-child(3){
+    text-align: center;
+    font-size: var(--letter-supermedium);
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+.menu a{
+    font-size: var(--letter-superbig);
+    background: var(--back-fullcolor);
+    color: var(--letter-color);
+    width: 50%;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 50px;
+}
+.menu a:hover {
+  background: var(--back-hovercolor);
+}
+.footer {
+    grid-row: 3 / 4;
+    grid-column: 1 / 4;
+    width: 100%;
+    background-color: rgba(136, 116, 116, 0.5);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.icon {
+  font-size: var(--font-icon-big);
+}
+.icon a{
+  color: var(--back-fullcolor);
+}
+.icon a:hover {
+  color: var(--back-hovercolor);
+}
+
+
+@media (max-width: 1100px) {
+ 
+    .menu a {
+      font-size: var(--letter-medium);
+    }
+    .icon {
+      font-size: var(--font-icon-medium);
+    }
+}
+@media (max-width: 900px) {
+  .header h1 {
+    font-size: var(--letter-supermedium);
+  }
+  .encabezado h1{
+    font-size: var(--letter-medium);
+  }
+  .circular {
+    width: 150px;
+    height: 150px;
+  }
+  .descrip p {
+    font-size: var(--letter-smal);
+  }
+  .descrip p:nth-child(1){
+    font-size: var(--letter-smal);
+  }
+  .descrip p:nth-child(2){
+    font-size: var(--letter-smal);
+  }
+  .descrip p:nth-child(3){
+    font-size: var(--letter-smal);
+  }
+}
+@media (max-width: 800px) {
+  .menu a {
+    font-size: var(--letter-supermedium);
+  }
+  .icon {
+    font-size: var(--font-icon-smal);
+  }
+}
+@media (max-width: 624px) {
+  .circular {
+    width: 100px;
+    height: 100px;
+  }
+  .descrip p{
+    font-weight: bold;
+  }
+  .descrip p:nth-child(1) {
+    font-weight: bold;
+  }
+  .descrip p:nth-child(2) {
+    font-weight: bold;
+  }
+  .descrip p:nth-child(3) {
+    font-weight: bold;
+  }
+}
+
+
+
