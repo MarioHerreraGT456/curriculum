@@ -1,6 +1,6 @@
 :root {
     --letter-color: white;
-    --letter-supersmal: 5px;
+    --letter-supersmal: 10px;
     --letter-smal:15px;
     --letter-supermedium: 20px;
     --letter-medium:30px;
@@ -182,4 +182,23 @@
   font-size: var(--font-icon-smal);
 }
 
+}
+@media (max-width: 624px) {
+  .grid-container {
+    grid-template-columns: 1fr 6fr 1fr;
+  }
+  .uba p {
+    font-size: var(--letter-supersmal);
+    text-align: center;
+  }
+  .platzi p {
+    font-size: var(--letter-supersmal);
+    text-align: center;
+  }
+  .carta p {
+    font-size: var(--letter-supersmal);
+  }
+  .boton a {
+    font-size: var(--letter-smal);
+  }
 }
