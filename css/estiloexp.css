@@ -1,6 +1,6 @@
 :root {
     --letter-color: white;
-    --letter-supersmal: 5px;
+    --letter-supersmal: 10px;
     --letter-smal:15px;
     --letter-supermedium: 20px;
     --letter-medium:30px;
@@ -255,4 +255,14 @@
 .icon {
     font-size: var(--font-icon-smal);
 }
+}
+@media (max-width: 400px) {
+    .web a {
+        font-size: var(--letter-supersmal);
+        height: 13px;
+    }
+    .sql a {
+        font-size: var(--letter-supersmal);
+        height: 13px;
+    }
 }
