@@ -1,6 +1,6 @@
 :root {
     --letter-color: white;
-    --letter-supersmal: 5px;
+    --letter-supersmal: 10px;
     --letter-smal:15px;
     --letter-supermedium: 20px;
     --letter-medium:30px;
@@ -213,6 +213,30 @@
   }
   .descrip p:nth-child(3) {
     font-weight: bold;
+  }
+}
+@media (max-width: 570px) {
+  .grid-container {
+    grid-template-columns: 1fr 5fr 1fr;
+  }
+  .encabezado h1 {
+    font-size: var(--letter-supermedium);
+    text-align: center;
+  }
+  .descrip p {
+    font-size: var(--letter-supersmal);
+  }
+  .descrip p:nth-child(1){
+    font-size: var(--letter-supersmal);
+  }
+  .descrip p:nth-child(2){
+    font-size: var(--letter-supersmal);
+  }
+  .descrip p:nth-child(3){
+    font-size: var(--letter-supersmal);
+  }
+  .menu a {
+    font-size: var(--letter-smal);
   }
 }
 
